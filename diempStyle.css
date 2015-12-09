@@ -9,6 +9,12 @@ body{
 h3{
 	font-size: 22px;
 }
+label{
+	font: 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
+	float: left;
+	font-weight: bold;
+	color: #0077be;
+}
 
 div.main{
 	width: 100%; height: 46px;
