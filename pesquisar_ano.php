@@ -103,10 +103,11 @@
 				<div id="eu">
 					<form class="form-wrapper" action="pesquisar_ano.php" method="get" style="width:380px">
 						<label for="search"> Ano de inÃ­cio de estÃ¡gio</label>
-						<input type="number" name="ano" id="search" style="text-align: center" placeholder="Ano de inÃ­cio de estÃ¡gio" required autofocus>
-						<input type="submit" value="buscar" style="width:80px" class="submit">
+						<input type="number" name="ano" id="search" style="text-align: center" placeholder="Ano de inÃ­cio de estÃ¡gio" required autofocus> <br>
+						<input type="submit" value="buscar" style="width:80px" class="submit"> <br> <br>
 					</form>
 				</div>
+				<a href='javascript:window.history.go(-1)'>Voltar <--- </a>	<br> 
 			</div>
 			<!-- Inicio php -->
 			<?php
@@ -117,10 +118,10 @@
 				die();
 										
 			$sql = "select id_aluno from estagio where Data_Inicio_Vigencia between '$ano-01-01' and '$ano-12-31' ";
-			$table = getTableAno($ano, $sql, "Alunos");
+			$table = getTableAno($c, $ano, $sql, "Alunos");
 			echo($table);
 
-			mysql_close($c);	
+			mysqli_close($c);	
 			?>
 			<!-- Fim php -->
 		</div> 
